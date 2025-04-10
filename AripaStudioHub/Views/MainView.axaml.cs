@@ -13,7 +13,7 @@ public partial class MainView : UserControl
     public MainView()
     {
         InitializeComponent();
-        Lang();
+        
     }
 
     void Lang()
@@ -93,6 +93,7 @@ public partial class MainView : UserControl
 
     private void CheckBox_Lang_Persian_OnIsCheckedChanged(object? sender, RoutedEventArgs e)
     {
+        Lang();
         if (sender is CheckBox checkbox)
         {
             if (checkbox.IsChecked == true)
@@ -110,7 +111,7 @@ public partial class MainView : UserControl
 
     private void CheckBox_Lang_English_OnIsCheckedChanged(object? sender, RoutedEventArgs e)
     {
-
+        Lang();
         if (sender is CheckBox checkbox)
         {
             if (checkbox.IsChecked == true)

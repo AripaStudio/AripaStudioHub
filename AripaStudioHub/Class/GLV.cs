@@ -10,5 +10,6 @@ namespace AripaStudioHub.Class
     {
         // Global Language Variable for Language
         public static string GLV_Language = "English";
+        
     }
 }
