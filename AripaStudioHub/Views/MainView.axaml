@@ -24,12 +24,12 @@
           <StackPanel HorizontalAlignment="Center" Margin="10" Background="#DCEEFF" >
               <Label HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"  >Aripa Studio</Label> 
                 
-                    <Button Name="Btn_main_page_border" Click="Btn_main_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Main Page" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                            FontSize="15" FontWeight="Bold"
-                    ></Button>
-                    <Button Name="Btn_Social_Media_Links_page_border" Click="Btn_Social_Media_Links_page_border_OnClick" Margin="5"  Width="230" Height="50" Content="Social Media Links" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                            FontSize="15" FontWeight="Bold"
-                    ></Button>
+              <Button Name="Btn_main_page_border" Click="Btn_main_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Main page" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                      FontSize="15" FontWeight="Bold"
+              ></Button>
+              <Button Name="Btn_Social_Media_Links_page_border" Click="Btn_Social_Media_Links_page_border_OnClick" Margin="5"  Width="230" Height="50" Content="Social Media Links" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                      FontSize="15" FontWeight="Bold"
+              ></Button>
 
 			  <Button Name="Btn_Game_page_border" Click="Btn_Game_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Games AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
@@ -79,12 +79,12 @@
 
       </Border>
 
-      <Border Name="Border_Setting" Background="#80A4C3" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_Setting" Background="#80A4C3" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
             <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal" >
                     <Label FontSize="18" FontWeight="Bold">language : </Label>
 					
-                        <CheckBox Name="CheckBox_Lang_Persian" IsChecked="False" IsCheckedChanged="CheckBox_Lang_Persian_OnIsCheckedChanged"  Margin="10,0,0,0" Content="Persian"></CheckBox>
+                        <CheckBox Name="CheckBox_Lang_Persian" IsChecked="False" IsEnabled="False" IsCheckedChanged="CheckBox_Lang_Persian_OnIsCheckedChanged"  Margin="10,0,0,0" Content="Persian"></CheckBox>
                     
                         <CheckBox Name="CheckBox_Lang_English" IsChecked="True" IsCheckedChanged="CheckBox_Lang_English_OnIsCheckedChanged" Margin="10,0,0,0"  Content="English"></CheckBox>
 					

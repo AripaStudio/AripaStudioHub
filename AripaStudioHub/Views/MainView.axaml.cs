@@ -6,9 +6,28 @@ namespace AripaStudioHub.Views;
 
 public partial class MainView : UserControl
 {
+    
+
+    public string Btn_Text_MainPageEnglish = "Main Page";
+
+    public string Btn_Text_MainPagePersian = "صفحه اصلی";
+
     public MainView()
     {
         InitializeComponent();
+        MessageBoxAP.MessageBoxShowOK("Lang : ", GLV.GLV_Language);
+        if (GLV.GLV_Language == "English")
+        {
+            Btn_main_page_border.Content = Btn_Text_MainPageEnglish;
+        }
+        else if (GLV.GLV_Language == "Persian")
+        {
+            Btn_main_page_border.Content = Btn_Text_MainPagePersian;
+        }
+        else
+        {
+            Btn_main_page_border.Content = Btn_Text_MainPageEnglish;
+        }
     }
 
     private void Btn_main_page_border_OnClick(object? sender, RoutedEventArgs e)
