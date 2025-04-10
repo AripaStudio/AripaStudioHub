@@ -24,21 +24,21 @@
           <StackPanel HorizontalAlignment="Center" Margin="10" Background="#DCEEFF" >
               <Label HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"  >Aripa Studio</Label> 
                 
-                    <Button Name="Btn_main_page_border" Margin="5" Width="230" Height="50" Content="Main Page" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    <Button Name="Btn_main_page_border" Click="Btn_main_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Main Page" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                             FontSize="15" FontWeight="Bold"
                     ></Button>
-                    <Button Name="Btn_Social_Media_Links_page_border" Margin="5"  Width="230" Height="50" Content="Social Media Links" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    <Button Name="Btn_Social_Media_Links_page_border" Click="Btn_Social_Media_Links_page_border_OnClick" Margin="5"  Width="230" Height="50" Content="Social Media Links" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                             FontSize="15" FontWeight="Bold"
                     ></Button>
 
-			  <Button Name="Btn_Game_page_border" Margin="5" Width="230" Height="50" Content="Games AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+			  <Button Name="Btn_Game_page_border" Click="Btn_Game_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Games AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
               ></Button>
 
-              <Button Name="Btn_SoftWare_page_border" Margin="5" Width="230" Height="50" Content="SoftWare AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+              <Button Name="Btn_SoftWare_page_border" Click="Btn_SoftWare_page_border_OnClick" Margin="5" Width="230" Height="50" Content="SoftWare AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
               ></Button>
-              <Button Name="Btn_Setting_page_border" Margin="5" Width="230" Height="50" Content="Setting" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+              <Button Name="Btn_Setting_page_border" Click="Btn_Setting_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Setting" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
               ></Button>
 
@@ -59,24 +59,27 @@
           </StackPanel>
       </Border>
 
-      <Border Name="Border_MainPage" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+
+
+
+      <Border Name="Border_MainPage"  Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
 
       </Border>
 
 
-	  <Border Name="Border_SocialMediaLinks" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+	  <Border Name="Border_SocialMediaLinks" Background="#E0E9F7" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
 
       </Border>
 
-      <Border Name="Border_GamesAP" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_GamesAP" Background="#C0D6E8" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
 
       </Border>
 
-      <Border Name="Border_SoftWareAP" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_SoftWareAP" Background="#A0C3D9" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
 
       </Border>
 
-      <Border Name="Border_Setting" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_Setting" Background="#80A4C3" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
 
       </Border>
   </Grid>
