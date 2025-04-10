@@ -8,28 +8,44 @@ public partial class MainView : UserControl
 {
     
 
-    public string Btn_Text_MainPageEnglish = "Main Page";
-
-    public string Btn_Text_MainPagePersian = "صفحه اصلی";
+    
 
     public MainView()
     {
         InitializeComponent();
-        MessageBoxAP.MessageBoxShowOK("Lang : ", GLV.GLV_Language);
+        Lang();
+    }
+
+    void Lang()
+    { 
+        string[] BtnTextEnglish = ["Main Page" , "Social Media Links" , "Games AP" , "SoftWare AP" , "Setting"];
+        string[] BtnTextPersian = ["صفحه اصلی " , "صفحه های مجازی" , "بازی های آریپا" , "نرم افزار های آریپا" , "تنظیمات"] ;
+
         if (GLV.GLV_Language == "English")
         {
-            Btn_main_page_border.Content = Btn_Text_MainPageEnglish;
+            Btn_main_page_border.Content = BtnTextEnglish[0];
+            Btn_Social_Media_Links_page_border.Content = BtnTextEnglish[1];
+            Btn_Game_page_border.Content = BtnTextEnglish[2];
+            Btn_SoftWare_page_border.Content = BtnTextEnglish[3];
+            Btn_Setting_page_border.Content = BtnTextEnglish[4];
         }
         else if (GLV.GLV_Language == "Persian")
         {
-            Btn_main_page_border.Content = Btn_Text_MainPagePersian;
+            Btn_main_page_border.Content = BtnTextPersian[0];
+            Btn_Social_Media_Links_page_border.Content = BtnTextPersian[1];
+            Btn_Game_page_border.Content = BtnTextPersian[2];
+            Btn_SoftWare_page_border.Content = BtnTextPersian[3];
+            Btn_Setting_page_border.Content = BtnTextPersian[4];
         }
         else
         {
-            Btn_main_page_border.Content = Btn_Text_MainPageEnglish;
+            Btn_main_page_border.Content = BtnTextEnglish[0];
+            Btn_Social_Media_Links_page_border.Content = BtnTextEnglish[1];
+            Btn_Game_page_border.Content = BtnTextEnglish[2];
+            Btn_SoftWare_page_border.Content = BtnTextEnglish[3];
+            Btn_Setting_page_border.Content = BtnTextEnglish[4];
         }
     }
-
     private void Btn_main_page_border_OnClick(object? sender, RoutedEventArgs e)
     {
         Border_MainPage.IsVisible = true;
