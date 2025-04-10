@@ -1,4 +1,5 @@
-﻿using Avalonia.Controls;
+﻿using AripaStudioHub.Class;
+using Avalonia.Controls;
 using Avalonia.Interactivity;
 
 namespace AripaStudioHub.Views;
@@ -53,5 +54,40 @@ public partial class MainView : UserControl
         Border_SocialMediaLinks.IsVisible = false;
         Border_SoftWareAP.IsVisible = false;
         Border_Setting.IsVisible = true;
+    }
+
+    private void CheckBox_Lang_Persian_OnIsCheckedChanged(object? sender, RoutedEventArgs e)
+    {
+        if (sender is CheckBox checkbox)
+        {
+            if (checkbox.IsChecked == true)
+            {
+                GLV.GLV_Language = "Persian";
+                CheckBox_Lang_English.IsEnabled = false;
+            }
+            else
+            {
+                GLV.GLV_Language = "English";
+                CheckBox_Lang_English.IsEnabled = true;
+            }
+        }
+    }
+
+    private void CheckBox_Lang_English_OnIsCheckedChanged(object? sender, RoutedEventArgs e)
+    {
+
+        if (sender is CheckBox checkbox)
+        {
+            if (checkbox.IsChecked == true)
+            {
+                GLV.GLV_Language = "English";
+                CheckBox_Lang_Persian.IsEnabled = false;
+            }
+            else
+            {
+                GLV.GLV_Language = "Persian";
+                CheckBox_Lang_Persian.IsEnabled = true;
+            }
+        }
     }
 }
