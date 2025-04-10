@@ -3,7 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AripaStudioHub.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="800
+			 
+			 "
              x:Class="AripaStudioHub.Views.MainView"
              x:DataType="vm:MainViewModel">
   <Design.DataContext>
@@ -13,7 +15,70 @@
   </Design.DataContext>
 
   <Grid Background="Beige">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+			<ColumnDefinition Width="*" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
+      <Border Grid.Column="0" Margin="4" Background="AliceBlue" BorderBrush="Black" BorderThickness="4" >
+          <StackPanel HorizontalAlignment="Center" Margin="10" Background="#DCEEFF" >
+              <Label HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"  >Aripa Studio</Label> 
+                
+                    <Button Name="Btn_main_page_border" Margin="5" Width="230" Height="50" Content="Main Page" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            FontSize="15" FontWeight="Bold"
+                    ></Button>
+                    <Button Name="Btn_Social_Media_Links_page_border" Margin="5"  Width="230" Height="50" Content="Social Media Links" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            FontSize="15" FontWeight="Bold"
+                    ></Button>
+
+			  <Button Name="Btn_Game_page_border" Margin="5" Width="230" Height="50" Content="Games AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                      FontSize="15" FontWeight="Bold"
+              ></Button>
+
+              <Button Name="Btn_SoftWare_page_border" Margin="5" Width="230" Height="50" Content="SoftWare AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                      FontSize="15" FontWeight="Bold"
+              ></Button>
+              <Button Name="Btn_Setting_page_border" Margin="5" Width="230" Height="50" Content="Setting" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                      FontSize="15" FontWeight="Bold"
+              ></Button>
+
+              <Image 
+                  HorizontalAlignment="Center"
+                  Source="../Assets/Icons/iconStudioMenu.png"
+                  Width="200"
+                  Height="200"
+                  ></Image>
+
+
+              <Image
+                  HorizontalAlignment="Center"
+                  Source="../Assets/Icons/icon_Aripa_studio_s_Game___Software_Division.png"
+                  Width="250"
+                  Height="250"
+              ></Image>
+          </StackPanel>
+      </Border>
+
+      <Border Name="Border_MainPage" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+
+      </Border>
+
+
+	  <Border Name="Border_SocialMediaLinks" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+
+      </Border>
+
+      <Border Name="Border_GamesAP" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+
+      </Border>
+
+      <Border Name="Border_SoftWareAP" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+
+      </Border>
+
+      <Border Name="Border_Setting" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+
+      </Border>
   </Grid>
 
 </UserControl>
