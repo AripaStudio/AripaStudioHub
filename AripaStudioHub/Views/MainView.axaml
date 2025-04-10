@@ -12,6 +12,8 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  
+  <Grid Background="Beige">
+
+  </Grid>
 
 </UserControl>
