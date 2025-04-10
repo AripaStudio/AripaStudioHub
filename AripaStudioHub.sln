@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AripaStudioHub", "AripaStudioHub\AripaStudioHub.csproj", "{41CCADE3-8C79-3B89-9DDC-4B0230132857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AripaStudioHub.Desktop", "AripaStudioHub.Desktop\AripaStudioHub.Desktop.csproj", "{512F9C48-7AB7-AE0B-56E0-62E7CAA0C40C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41CCADE3-8C79-3B89-9DDC-4B0230132857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41CCADE3-8C79-3B89-9DDC-4B0230132857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41CCADE3-8C79-3B89-9DDC-4B0230132857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41CCADE3-8C79-3B89-9DDC-4B0230132857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{512F9C48-7AB7-AE0B-56E0-62E7CAA0C40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{512F9C48-7AB7-AE0B-56E0-62E7CAA0C40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{512F9C48-7AB7-AE0B-56E0-62E7CAA0C40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{512F9C48-7AB7-AE0B-56E0-62E7CAA0C40C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D9D12F8-6E8E-425B-8B24-E60872F20783}
+	EndGlobalSection
+EndGlobal
