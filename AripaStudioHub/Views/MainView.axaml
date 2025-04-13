@@ -28,7 +28,7 @@
 			<ColumnDefinition Width="*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-      <Border Grid.Column="0" Margin="4" Background="AliceBlue" BorderBrush="Black" BorderThickness="4" >
+      <Border Grid.Column="0" Margin="4" IsVisible="True" Background="AliceBlue" BorderBrush="Black" BorderThickness="4" >
           <StackPanel HorizontalAlignment="Center" Margin="10" Background="#DCEEFF" >
               <Label HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"  >Aripa Studio</Label> 
                 
@@ -70,7 +70,7 @@
 
 
 
-      <Border Name="Border_MainPage"  Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_MainPage"  Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
            <StackPanel>
                <Image
                    Source="../Assets/Icons/iconStudioMenu.png"
@@ -89,7 +89,7 @@
       </Border>
 
 
-	  <Border Name="Border_SocialMediaLinks" Background="#E0E9F7" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+	  <Border Name="Border_SocialMediaLinks" Background="#E0E9F7" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
             <StackPanel>
                 
 
@@ -116,6 +116,7 @@
                                 VerticalContentAlignment="Center"
                                 BorderBrush="Black"
                                 BorderThickness="6"
+                                Click="BtnSocialMedia_Telegram_OnClick"
                         ></Button>
 					</StackPanel>
 
@@ -136,6 +137,7 @@
                                 VerticalContentAlignment="Center"
                                 BorderBrush="Black"
                                 BorderThickness="6"
+                                Click="BtnSocialMedia_Github_OnClick"
                         ></Button>
 					</StackPanel>
 
@@ -156,6 +158,7 @@
 								VerticalContentAlignment="Center"
 								BorderBrush="Black"
 								BorderThickness="6"
+                                Click="BtnSocialMedia_Youtube_OnClick"
                     ></Button>
 					</StackPanel>
 
@@ -166,7 +169,11 @@
       </Border>
 
       <Border Name="Border_GamesAP" Background="#C0D6E8" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
-
+          <StackPanel>
+              <StackPanel Orientation="Horizontal">
+                  
+              </StackPanel>
+          </StackPanel>
       </Border>
 
       <Border Name="Border_SoftWareAP" Background="#A0C3D9" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >

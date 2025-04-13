@@ -193,4 +193,60 @@ public partial class MainView : UserControl
             throw;
         }
     }
+
+    private void BtnSocialMedia_Telegram_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string url = "https://t.me/AripaStudio";
+        try
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
+        catch (Exception exception)
+        {
+            MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception));
+            throw;
+        }
+    }
+
+    private void BtnSocialMedia_Github_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string url = "https://github.com/AripaStudio";
+        try
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
+        catch (Exception exception)
+        {
+            MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception));
+            throw;
+        }
+    }
+
+    private void BtnSocialMedia_Youtube_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string url = "https://www.youtube.com/@AripaStudio";
+        try
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
+        catch (Exception exception)
+        {
+            MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception));
+            throw;
+        }
+
+    }
 }
+
