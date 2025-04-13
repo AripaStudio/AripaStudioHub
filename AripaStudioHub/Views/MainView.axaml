@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AripaStudioHub.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="820
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="830
 			 
 			 "
              x:Class="AripaStudioHub.Views.MainView"
@@ -14,7 +14,15 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
+
+
+	<ScrollViewer
+        HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+
+    
+    
   <Grid Background="Beige">
+      
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
 			<ColumnDefinition Width="*" ></ColumnDefinition>
@@ -63,12 +71,98 @@
 
 
       <Border Name="Border_MainPage"  Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
-
+           <StackPanel>
+               <Image
+                   Source="../Assets/Icons/iconStudioMenu.png"
+                   Width="500"
+                   Height="500"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+               ></Image>
+               <Button
+                   HorizontalAlignment="Center" Width="600" Height="60" Background="Black"
+                   FontSize="13" FontWeight="Bold" Foreground="White"
+                   VerticalAlignment="Center"  Content="For more information about our software  games, follow us on Telegram (click to follow)." HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    Name="Btn_MainPageTelegramLink" Click="Btn_MainPageTelegramLink_OnClick"
+                   ></Button>
+		   </StackPanel>
       </Border>
 
 
-	  <Border Name="Border_SocialMediaLinks" Background="#E0E9F7" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+	  <Border Name="Border_SocialMediaLinks" Background="#E0E9F7" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+            <StackPanel>
+                
 
+					<StackPanel Margin="0,0,0,30">
+						<Label HorizontalAlignment="Center" FontSize="44" FontWeight="Bold">
+							Aripa Studio
+						</Label>
+					</StackPanel>
+
+
+					<StackPanel
+						Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0,0,0,20"
+                    >
+						<Image
+                            Source="../Assets/Icons/SocialMedia/telegram.png"
+                            Width="50"
+                            Height="50"
+                            Margin="0,0,10,0"
+                            ></Image>
+
+						<Button Name="BtnSocialMedia_Telegram"
+                                Height="50" Width="100" Content="Telegram" HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                BorderBrush="Black"
+                                BorderThickness="6"
+                        ></Button>
+					</StackPanel>
+
+
+
+					<StackPanel
+						Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0,0,0,20"
+                >
+						<Image
+							Source="../Assets/Icons/SocialMedia/github.png"
+							Width="50"
+							Height="50"
+							Margin="0,0,10,0"
+                    ></Image>
+						<Button Name="BtnSocialMedia_Github"
+                                Height="50" Width="100" Content="Github" HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                BorderBrush="Black"
+                                BorderThickness="6"
+                        ></Button>
+					</StackPanel>
+
+
+
+					<StackPanel
+						Orientation="Horizontal" HorizontalAlignment="Center"
+						Margin="0,0,0,20"
+                >
+						<Image
+							Source="../Assets/Icons/SocialMedia/youtube.png"
+							Width="50"
+							Height="50"
+							Margin="0,0,10,0"
+                    ></Image>
+						<Button Name="BtnSocialMedia_Youtube"
+                                Height="50" Width="100" Content="Youtube" HorizontalContentAlignment="Center"
+								VerticalContentAlignment="Center"
+								BorderBrush="Black"
+								BorderThickness="6"
+                    ></Button>
+					</StackPanel>
+
+                <Label Name="Lbl_Content_SocialMedia" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" ></Label>
+				</StackPanel>
+
+            
       </Border>
 
       <Border Name="Border_GamesAP" Background="#C0D6E8" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
@@ -91,6 +185,8 @@
                 </StackPanel>
             </StackPanel>
       </Border>
-  </Grid>
 
+     
+  </Grid>
+    </ScrollViewer>
 </UserControl>
