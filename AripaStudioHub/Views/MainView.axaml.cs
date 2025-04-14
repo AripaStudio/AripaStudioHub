@@ -3,6 +3,8 @@ using System.Diagnostics;
 using AripaStudioHub.Class;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 
 namespace AripaStudioHub.Views;
 
@@ -273,5 +275,113 @@ public partial class MainView : UserControl
 
     }
 
+
+
+    //____________________________________________________________________
+    //Games AP : 
+
+    private async void Btn_GamesAP_EFR_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Avalonia.Media.IImage linkImage;
+        try
+        {
+            var uri = new Uri("avares://AripaStudioHub/Assets/GameAsoftware/EFR_Qab.png");
+            linkImage = new Bitmap(AssetLoader.Open(uri));
+        }
+        catch (Exception ex)
+        {
+
+            linkImage = null;
+            MessageBoxAP.MessageBoxShowOK("Error", $"Error loading image: {ex.Message}");
+        }
+
+
+        string message ;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      بازی فرار از واقعیت AP (EFR) یک بازی معمایی ، داستان و دارای فایت های ساده است 
+                      یک بازی ساده و کوتاه است این بازی قسمت اول EFR است (EFR 1)
+                      گیم پلی بازی : تقریبا 10 دقیقه
+                      """;
+
+        }else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      The game Escape From Reality AP (EFR) is a puzzle, story-driven game with simple fights.  
+                      It is a short and simple game. This is the first part of EFR (EFR 1).  
+                      Gameplay duration: approximately 10 minutes.  
+                      """;
+        }
+        else
+        {
+            message = """
+                      The game Escape From Reality AP (EFR) is a puzzle, story-driven game with simple fights.  
+                      It is a short and simple game. This is the first part of EFR (EFR 1).  
+                      Gameplay duration: approximately 10 minutes.  
+                      """;
+        }
+
+
+        await MessageBoxAP.ShowGameDialog("GamesAP", message, "Escape From Reality AP",
+                "https://aripastudio.itch.io/escapefromrealityap", linkImage);
+
+    }
+
+    private async void Btn_GamesAP_JangeDayero_OnClick(object? sender, RoutedEventArgs e)
+    {
+       
+            
+            Avalonia.Media.IImage linkImage;
+            try
+            {
+                var uri = new Uri("avares://AripaStudioHub/Assets/GameAsoftware/JangeDayero.jpg");
+                linkImage = new Bitmap(AssetLoader.Open(uri));
+            }
+            catch (Exception ex)
+            {
+                
+                linkImage = null; 
+                MessageBoxAP.MessageBoxShowOK("Error", $"Error loading image: {ex.Message}");
+            }
+
+            
+            
+
+            string message;
+            if (GLV.GLV_Language == "Persian")
+            {
+                message = """
+                          درود به همه ، بازی (Jange Dayero ) منتشر شد
+                          سیستم عامل های پشتیبانی شده : Windows , linux , MacOS 
+                          همین الان میتونید این بازی رو از لینک زیر دانلود کنید
+                          """;
+
+            }
+            else if (GLV.GLV_Language == "English")
+            {
+                message = """
+                          Hello everyone, the game "Jange Dayero" has been released.
+                          Supported operating systems: Windows, Linux, MacOS
+                          You can download the game now from the link below.
+                          """; 
+                          
+            }
+            else
+            {
+                message = """
+                          Hello everyone, the game "Jange Dayero" has been released.
+                          Supported operating systems: Windows, Linux, MacOS
+                          You can download the game now from the link below.
+                          """;
+            }
+
+
+            await MessageBoxAP.ShowGameDialog("GamesAP", message, "Jange Dayro AP",
+                "https://aripastudio.itch.io/jange-dayeroap", linkImage);
+
+    }
+
+    //____________________________________________________________________
 }
 

@@ -192,6 +192,7 @@
                           Foreground="White"
                           Content="Download|Description"
                           FontSize="15"
+                          Click="Btn_GamesAP_JangeDayero_OnClick"
                           ></Button>
                   </StackPanel>
 
@@ -209,6 +210,7 @@
                           Foreground="Black"
                           Content="Download|Description"
                           FontSize="15"
+                          Click="Btn_GamesAP_EFR_OnClick"
                       ></Button>
                   </StackPanel>
               </StackPanel>

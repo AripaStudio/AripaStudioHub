@@ -59,7 +59,7 @@ namespace AripaStudioHub.Class
         }
 
 
-        // Show a game dialog with a title, message, name of the game, download link, and image
+        // Show a game and Software dialog with a title, message, name of the game, download link, and image
         public static async Task ShowGameDialog(string title, string message, string nameGame, string linkDownload, Avalonia.Media.IImage pathImage)
         {
             var dialog = new Window
@@ -67,7 +67,7 @@ namespace AripaStudioHub.Class
                 Title = title,
                 CanResize = false,
                 Width = 800,
-                Height = 600,
+                Height = 400,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
                 Background = Brushes.Beige
             };
@@ -145,6 +145,10 @@ namespace AripaStudioHub.Class
                     await dialog.ShowDialog(desktop.MainWindow);
                 }
         }
+
+
+       
+
     }
 
     }
