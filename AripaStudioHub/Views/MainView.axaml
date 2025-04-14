@@ -47,27 +47,29 @@
               <Button Name="Btn_SoftWare_page_border" Click="Btn_SoftWare_page_border_OnClick" Margin="5" Width="230" Height="50" Content="SoftWare AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
               ></Button>
+              <Button Name="Btn_Coming_Soon_Border" Click="Btn_Coming_Soon_Border_OnClick"  Margin="5"  Width="230" Height="50" Content="Coming Soon" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                      FontSize="15" FontWeight="Bold"
+              ></Button>
+
               <Button Name="Btn_Setting_page_border" Click="Btn_Setting_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Setting" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
               ></Button>
 
-              <Button Name="Btn_Soon_Border"  Margin="5"  Width="230" Height="50" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                      FontSize="15" FontWeight="Bold"
-              ></Button>
+              
 
               <Image 
                   HorizontalAlignment="Center"
                   Source="../Assets/Icons/iconStudioMenu.png"
-                  Width="200"
-                  Height="200"
+                  Width="150"
+                  Height="150"
                   ></Image>
 
 
               <Image
                   HorizontalAlignment="Center"
                   Source="../Assets/Icons/icon_Aripa_studio_s_Game___Software_Division.png"
-                  Width="250"
-                  Height="250"
+                  Width="200"
+                  Height="200"
               ></Image>
           </StackPanel>
       </Border>
@@ -235,6 +237,10 @@
 					
                 </StackPanel>
             </StackPanel>
+      </Border>
+
+      <Border Name="Border_Coming_Soon" Background="#829FB2" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+                    
       </Border>
 
      

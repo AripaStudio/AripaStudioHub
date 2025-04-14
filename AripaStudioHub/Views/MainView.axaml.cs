@@ -18,8 +18,8 @@ public partial class MainView : UserControl
 
         Lbl_Content_SocialMedia.Content = TextEnSocialMediaPage[0];
     }
-    public string[] BtnTextEnglish = ["Main Page", "Social Media Links", "Games AP", "SoftWare AP", "Setting"];
-    public string[] BtnTextPersian = ["صفحه اصلی ", "صفحه های مجازی", "بازی های آریپا", "نرم افزار های آریپا", "تنظیمات"];
+    public string[] BtnTextEnglish = ["Main Page", "Social Media Links", "Games AP", "SoftWare AP", "Setting" , "Coming Soon"];
+    public string[] BtnTextPersian = ["صفحه اصلی ", "صفحه های مجازی", "بازی های آریپا", "نرم افزار های آریپا", "تنظیمات" , "به زودی"];
     //Main page:
     public string[] BtnTextEnMainPage = ["For more information about our software & games, follow us on Telegram (click to follow)."];
     public string[] BtnTextPeMainPage = ["برای اطلاعات بیشتر از نرم افزار  و بازی  های ما، در تلگرام ما را دنبال کنید (برای دنبال کردن کلیک کنید)."];
@@ -37,6 +37,8 @@ public partial class MainView : UserControl
                                               "برای اخبار استودیو، ما را در تلگرام دنبال کنید." + Environment.NewLine +
                                               "برای دیدن ویدیوهای بازی  و نرم  ما، ما را در یوتیوب دنبال کنید.")
         , "یوتیوب" , "گیت هاب" , "تلگرام"];
+
+
     void Lang()
     { 
        
@@ -50,6 +52,7 @@ public partial class MainView : UserControl
             Btn_Game_page_border.Content = BtnTextEnglish[2];
             Btn_SoftWare_page_border.Content = BtnTextEnglish[3];
             Btn_Setting_page_border.Content = BtnTextEnglish[4];
+            Btn_Coming_Soon_Border.Content = BtnTextEnglish[5];
             //button main page
             Btn_MainPageTelegramLink.Content = BtnTextEnMainPage[0];
             // SocialMedia Content 
@@ -68,6 +71,7 @@ public partial class MainView : UserControl
             Btn_Game_page_border.Content = BtnTextPersian[2];
             Btn_SoftWare_page_border.Content = BtnTextPersian[3];
             Btn_Setting_page_border.Content = BtnTextPersian[4];
+            Btn_Coming_Soon_Border.Content = BtnTextPersian[5];
             //button main page
             Btn_MainPageTelegramLink.Content = BtnTextPeMainPage[0];
             // SocialMedia Content
@@ -85,6 +89,7 @@ public partial class MainView : UserControl
             Btn_Game_page_border.Content = BtnTextEnglish[2];
             Btn_SoftWare_page_border.Content = BtnTextEnglish[3];
             Btn_Setting_page_border.Content = BtnTextEnglish[4];
+            Btn_Coming_Soon_Border.Content = BtnTextEnglish[5];
             //button main page
             Btn_MainPageTelegramLink.Content = BtnTextEnMainPage[0];
             // SocialMedia Content
@@ -102,6 +107,7 @@ public partial class MainView : UserControl
         Border_SocialMediaLinks.IsVisible = false;
         Border_SoftWareAP.IsVisible = false;
         Border_Setting.IsVisible = false;
+        Border_Coming_Soon.IsVisible = false;
     }
 
     private void Btn_Social_Media_Links_page_border_OnClick(object? sender, RoutedEventArgs e)
@@ -111,6 +117,7 @@ public partial class MainView : UserControl
         Border_SocialMediaLinks.IsVisible = true;
         Border_SoftWareAP.IsVisible = false;
         Border_Setting.IsVisible = false;
+        Border_Coming_Soon.IsVisible = false;
     }
 
     private void Btn_Game_page_border_OnClick(object? sender, RoutedEventArgs e)
@@ -120,6 +127,7 @@ public partial class MainView : UserControl
         Border_SocialMediaLinks.IsVisible = false;
         Border_SoftWareAP.IsVisible = false;
         Border_Setting.IsVisible = false;
+        Border_Coming_Soon.IsVisible = false;
     }
 
     private void Btn_SoftWare_page_border_OnClick(object? sender, RoutedEventArgs e)
@@ -129,6 +137,7 @@ public partial class MainView : UserControl
         Border_SocialMediaLinks.IsVisible = false;
         Border_SoftWareAP.IsVisible = true;
         Border_Setting.IsVisible = false;
+        Border_Coming_Soon.IsVisible = false;
     }
 
     private void Btn_Setting_page_border_OnClick(object? sender, RoutedEventArgs e)
@@ -138,7 +147,22 @@ public partial class MainView : UserControl
         Border_SocialMediaLinks.IsVisible = false;
         Border_SoftWareAP.IsVisible = false;
         Border_Setting.IsVisible = true;
+        Border_Coming_Soon.IsVisible = false;
     }
+
+
+    private void Btn_Coming_Soon_Border_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Border_MainPage.IsVisible = false;
+        Border_GamesAP.IsVisible = false;
+        Border_SocialMediaLinks.IsVisible = false;
+        Border_SoftWareAP.IsVisible = false;
+        Border_Setting.IsVisible = false;
+        Border_Coming_Soon.IsVisible = true;
+        
+    }
+
+
 
     private void CheckBox_Lang_Persian_OnIsCheckedChanged(object? sender, RoutedEventArgs e)
     {
@@ -248,5 +272,6 @@ public partial class MainView : UserControl
         }
 
     }
+
 }
 
