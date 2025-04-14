@@ -383,5 +383,154 @@ public partial class MainView : UserControl
     }
 
     //____________________________________________________________________
+    //________________________________________________________________________________________________________________________________________
+    //________________________________________________________________________________________________________________________________________
+    //SoftWare page : 
+    private async void Btn_SoftWareAP_MaterialColorAP_OnClick(object? sender, RoutedEventArgs e)
+    {
+
+
+        string message;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      این یک نرم‌افزار متریال رنگ است که می‌توانید رنگ خود را انتخاب کنید و در برنامه امتحان کنید.
+                      
+                      این نرم‌افزار فقط برای ویندوز است. برای اطلاعات بیشتر و دانلود، روی دکمه دانلود کلیک کنید.
+                      """;
+
+        }
+        else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      This is a material color software where you can choose your color and test it in the program.
+                      
+                      This software is only for Windows. For more information and to download, click the Download button.
+                      """;
+
+        }
+        else
+        {
+            message = """
+                      This is a material color software where you can choose your color and test it in the program.
+                      
+                      This software is only for Windows. For more information and to download, click the Download button.
+                      """;
+        }
+
+        await MessageBoxAP.ShowSoftWareSimpledialog("SoftwareAP", message, "MaterialColorAP", "https://t.me/AripaStudio/15");
+
+
+
+
+    }
+
+    private async void Btn_SoftWareAP_RandomWKap_OnClick(object? sender, RoutedEventArgs e)
+    {
+
+        string message;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      این یک نرم‌افزار رندوم کار است که می‌توانید برای کارهای رندوم از آن استفاده کنید.
+                      
+                      این نرم‌افزار فقط برای ویندوز است. برای اطلاعات بیشتر و دانلود، روی دکمه دانلود کلیک کنید.
+                      """;
+
+        }
+        else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      This is a random task software that you can use for random tasks.
+                      
+                      This software is only for Windows. For more information and to download, click the Download button.
+                      """;
+
+        }
+        else
+        {
+            message = """
+                      This is a random task software that you can use for random tasks.
+                      
+                      This software is only for Windows. For more information and to download, click the Download button.
+                      """;
+        }
+
+        await MessageBoxAP.ShowSoftWareSimpledialog("SoftwareAP", message, "RandomWKap", "https://t.me/AripaStudio/11");
+
+    }
+
+    private async void Btn_SoftWareAP_TodoListAP_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string message;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      این یک نرم‌افزار مدیریت وظایف است با قابلیت‌هایی مانند ذخیره تسک‌ها، مشخص کردن جزئیات، و غیره.
+                      
+                      این نرم‌افزار فقط برای ویندوز است. برای اطلاعات بیشتر و دانلود، روی دکمه دانلود کلیک کنید.
+                      """;
+
+        }
+        else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      This is a task management software with features such as saving tasks, specifying details, and more.
+                      
+                      This software is only for Windows. For more information and to download, click the Download button.
+                      """;
+
+        }
+        else
+        {
+            message = """
+                      This is a task management software with features such as saving tasks, specifying details, and more.
+                      
+                      This software is only for Windows. For more information and to download, click the Download button.
+                      """;
+        }
+
+        await MessageBoxAP.ShowSoftWareSimpledialog("SoftwareAP", message, "TodoListAP", "https://t.me/AripaStudio/24");
+    }
+
+    private async void Btn_SoftWareAP_DNCaripaap_OnClick(object? sender, RoutedEventArgs e)
+    {
+
+        string message;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      این یک نرم‌افزار کنسولی (نسخه گرافیکی DNCaripa 2.0.0، برای اطلاعات بیشتر کانال تلگرام ما را دنبال کنید) برای تغییر DNS در ویندوز است که می‌توانید DNS خود را تغییر دهید، ریست کنید، و DNS خود را ببینید، همراه با قابلیت‌های دیگر...
+                      
+                      این نرم‌افزار فقط برای ویندوز است. برای اطلاعات بیشتر و دانلود، روی دکمه دانلود کلیک کنید.
+                      """;
+
+        }
+        else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      This is a console application (graphical version DNCaripa 2.0.0, follow our Telegram channel for more information) for changing DNS in Windows, allowing you to change, reset, and view your DNS, along with other features...
+                      
+                      This software is only for Windows. For more information and to download, click the download button.
+                      """;
+
+        }
+        else
+        {
+            message = """
+                      This is a console application (graphical version DNCaripa 2.0.0, follow our Telegram channel for more information) for changing DNS in Windows, allowing you to change, reset, and view your DNS, along with other features...
+                      
+                      This software is only for Windows. For more information and to download, click the download button.
+                      """;
+        }
+
+        await MessageBoxAP.ShowSoftWareSimpledialog("SoftwareAP", message, "DNCaripa", "https://github.com/AripaStudio/DNSchangerWindowsConsole/releases/");
+    }
+
+    //____________________________________________________________________
+    //________________________________________________________________________________________________________________________________________
+    //________________________________________________________________________________________________________________________________________
+    
+    
 }
 

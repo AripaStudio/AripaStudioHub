@@ -175,7 +175,7 @@
             
       </Border>
 
-      <Border Name="Border_GamesAP" Background="#C0D6E8" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_GamesAP" Background="#C0D6E8" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
           <StackPanel>
               <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                   <StackPanel Margin="20">
@@ -224,8 +224,80 @@
           </StackPanel>
       </Border>
 
-      <Border Name="Border_SoftWareAP" Background="#A0C3D9" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_SoftWareAP" Background="#A0C3D9" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+		  <StackPanel>
+			  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                  <StackPanel Margin="20">
+					  <Label Content="Name : Material Color AP"></Label>
+                      <Button
+                          Name="Btn_SoftWareAP_MaterialColorAP"
+                          Width="180"
+                          Height="40"
+                          Background="Black"
+                          Foreground="White"
+                          Content="Download|Description"
+                          FontSize="15"
+                          Click="Btn_SoftWareAP_MaterialColorAP_OnClick"
+                      ></Button>
+                  </StackPanel>
 
+                  <StackPanel Margin="20">
+					  <Label Content="Name : RandomWK AP"></Label>
+                      <Button
+                          Name="Btn_SoftWareAP_RandomWKap"
+                          Width="180"
+                          Height="40"
+                          Background="DarkSalmon"
+                          Foreground="Black"
+                          Content="Download|Description"
+                          FontSize="15"
+                          Click="Btn_SoftWareAP_RandomWKap_OnClick"
+                      ></Button>
+                  </StackPanel>
+
+              </StackPanel>
+
+
+
+              <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                  <StackPanel Margin="20">
+
+
+                    
+                    <Label Content="Name : TodoList AP"></Label>
+                  <Button
+                      Name="Btn_SoftWareAP_TodoListAP"
+                      Width="180"
+                      Height="40"
+                      Background="Black"
+                      Foreground="White"
+                      Content="Download|Description"
+                      FontSize="15"
+                      Click="Btn_SoftWareAP_TodoListAP_OnClick"
+                  ></Button>
+              </StackPanel>
+
+              <StackPanel Margin="20">
+				  <Label Content="Name : DNCaripa AP"></Label>
+                  <Button
+                      Name="Btn_SoftWareAP_DNCaripaap"
+                      Width="180"
+                      Height="40"
+                      Background="DarkSalmon"
+                      Foreground="Black"
+                      Content="Download|Description"
+                      Click="Btn_SoftWareAP_DNCaripaap_OnClick"
+                      FontSize="15"
+                          
+                  ></Button>
+              </StackPanel>
+
+
+
+              </StackPanel>
+              <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  Text="This is the initial version of the program. In future versions, we will improve the software's appearance. Thank you!"></TextBlock>
+		  </StackPanel>
       </Border>
 
       <Border Name="Border_Setting" Background="#80A4C3" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
