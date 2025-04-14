@@ -39,6 +39,7 @@
                       FontSize="15" FontWeight="Bold"
               ></Button>
 
+
 			  <Button Name="Btn_Game_page_border" Click="Btn_Game_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Games AP" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
               ></Button>
@@ -47,6 +48,10 @@
                       FontSize="15" FontWeight="Bold"
               ></Button>
               <Button Name="Btn_Setting_page_border" Click="Btn_Setting_page_border_OnClick" Margin="5" Width="230" Height="50" Content="Setting" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                      FontSize="15" FontWeight="Bold"
+              ></Button>
+
+              <Button Name="Btn_Soon_Border"  Margin="5"  Width="230" Height="50" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       FontSize="15" FontWeight="Bold"
               ></Button>
 
@@ -70,7 +75,7 @@
 
 
 
-      <Border Name="Border_MainPage"  Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_MainPage"  Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
            <StackPanel>
                <Image
                    Source="../Assets/Icons/iconStudioMenu.png"
@@ -168,10 +173,49 @@
             
       </Border>
 
-      <Border Name="Border_GamesAP" Background="#C0D6E8" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_GamesAP" Background="#C0D6E8" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
           <StackPanel>
-              <StackPanel Orientation="Horizontal">
-                  
+              <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                  <StackPanel Margin="20">
+                      <Image Source="../Assets/GameAsoftware/JangeDayero.jpg" 
+                             Width="300"
+                             Height="300"
+
+                             ></Image>
+                      <Button 
+                          Name="Btn_GamesAP_JangeDayero"
+                          Width="180"
+                          Height="40"
+                          Background="Black"
+                          Foreground="White"
+                          Content="Download|Description"
+                          FontSize="15"
+                          ></Button>
+                  </StackPanel>
+
+				  <StackPanel Margin="20">
+                      <Image Source="../Assets/GameAsoftware/EFR_Qab.png"
+                             Width="300"
+                             Height="300"
+
+                      ></Image>
+                      <Button
+                          Name="Btn_GamesAP_EFR"
+                          Width="180"
+                          Height="40"
+                          Background="DarkSalmon"
+                          Foreground="Black"
+                          Content="Download|Description"
+                          FontSize="15"
+                      ></Button>
+                  </StackPanel>
+              </StackPanel>
+
+
+
+              <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+
               </StackPanel>
           </StackPanel>
       </Border>

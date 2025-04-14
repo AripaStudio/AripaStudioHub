@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,5 +57,94 @@ namespace AripaStudioHub.Class
         {
             dlg.Close();
         }
+
+
+        // Show a game dialog with a title, message, name of the game, download link, and image
+        public static async Task ShowGameDialog(string title, string message, string nameGame, string linkDownload, Avalonia.Media.IImage pathImage)
+        {
+            var dialog = new Window
+            {
+                Title = title,
+                CanResize = false,
+                Width = 800,
+                Height = 600,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                Background = Brushes.Beige
+            };
+
+            var grid = new Grid
+            {
+                ColumnDefinitions = new ColumnDefinitions("Auto, *"),
+                Margin = new Thickness(10)
+            };
+
+            var imagePanel = new StackPanel
+            {
+                Orientation = Orientation.Vertical,
+                Margin = new Thickness(0, 0, 10, 0)
+            };
+            imagePanel.Children.Add(new Image
+            {
+                Source = pathImage,
+                Width = 300,
+                Height = 300
+            });
+            Grid.SetColumn(imagePanel, 0);
+            grid.Children.Add(imagePanel);
+
+            var contentPanel = new StackPanel
+            {
+                Orientation = Orientation.Vertical,
+                Margin = new Thickness(10, 0, 0, 0)
+            };
+            contentPanel.Children.AddRange(new Control[]
+            {
+            new Label
+            {
+                Content = nameGame,
+                FontSize = 18,
+                Foreground = Brushes.Black
+            },
+            new Label
+            {
+                Content = message,
+                FontSize = 15,
+                Foreground = Brushes.Black,
+                Margin = new Thickness(0, 10, 0, 0)
+            },
+            new Button
+            {
+                Content = "Download",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                Margin = new Thickness(10),
+                Command = ReactiveCommand.Create(() =>
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = linkDownload,
+                        UseShellExecute = true
+                    });
+                })
+            },
+            new Button
+            {
+                Content = "OK",
+                HorizontalAlignment = HorizontalAlignment.Center,
+                Margin = new Thickness(10),
+                Command = ReactiveCommand.Create(() => CloseDiaog(dialog))
+            }
+                });
+                Grid.SetColumn(contentPanel, 1);
+                grid.Children.Add(contentPanel);
+
+                dialog.Content = grid;
+
+                
+                if (App.Current.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+                {
+                    await dialog.ShowDialog(desktop.MainWindow);
+                }
+        }
     }
-}
+
+    }
