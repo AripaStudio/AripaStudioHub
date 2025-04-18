@@ -77,7 +77,7 @@
 
 
 
-      <Border Name="Border_MainPage"  Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+      <Border Name="Border_MainPage"  Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
            <StackPanel>
                <Image
                    Source="../Assets/Icons/iconStudioMenu.png"
@@ -313,8 +313,8 @@
             </StackPanel>
       </Border>
 
-      <Border Name="Border_Coming_Soon" Background="#829FB2" Margin="4" IsVisible="False" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
-                    
+      <Border Name="Border_Coming_Soon" Background="#829FB2" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
+                     
       </Border>
 
      
