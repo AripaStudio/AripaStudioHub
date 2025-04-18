@@ -530,7 +530,81 @@ public partial class MainView : UserControl
     //____________________________________________________________________
     //________________________________________________________________________________________________________________________________________
     //________________________________________________________________________________________________________________________________________
-    
-    
+
+
+    private void Btn_ComingSoon_Corner_of_Existence_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string message;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      یک بازی با سبک بقا و اکشن است 
+                      در آینده ساخت آن شروع میشود و اطلاعات بیشتر منتشر میشود
+                      """;
+        } else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      It is a survival and action style game. Its development will begin in the future, and more information will be released.
+                      """;
+        }
+        else
+        {
+            message = """
+                      It is a survival and action style game. Its development will begin in the future, and more information will be released.
+                      """;
+        }
+
+        MessageBoxAP.MessageBoxShowOK("Corner of Existence", message);
+    }
+
+    private void Btn_ComingSoon_DNCaripa2_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string message;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      نسخه پیشرفته تر و گرافیکی نرم افزار (DNCaripa)
+                      """;
+        }
+        else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      A more advanced and graphical version of the software (DNCaripa)
+                      """;
+        }
+        else
+        {
+            message = """
+                      A more advanced and graphical version of the software (DNCaripa)
+                      """;
+        }
+
+        MessageBoxAP.MessageBoxShowOK("DNCaripa2 ", message);
+    }
+
+    private void Btn_ComingSoon_VibeDriveAP_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string message;
+        if (GLV.GLV_Language == "Persian")
+        {
+            message = """
+                      یک نرم افزار مدیریت و نظم دهی به فایل ها است
+                      """;
+        }
+        else if (GLV.GLV_Language == "English")
+        {
+            message = """
+                      It is a software for managing and organizing files.
+                      """;
+        }
+        else
+        {
+            message = """
+                      It is a software for managing and organizing files.
+                      """;
+        }
+
+        MessageBoxAP.MessageBoxShowOK("VibeDrive ", message);
+    }
 }
 

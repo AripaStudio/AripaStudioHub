@@ -314,7 +314,73 @@
       </Border>
 
       <Border Name="Border_Coming_Soon" Background="#829FB2" Margin="4" IsVisible="True" Grid.Column="1" BorderBrush="Black" BorderThickness="4" >
-                     
+		  <StackPanel Orientation="Vertical">
+			 <StackPanel>
+                    <Label>Games : </Label>
+				 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                     <StackPanel Margin="20">
+                         <Label Content="Name :  Corner of Existence "></Label>
+                         <Button
+                             Name="Btn_ComingSoon_Corner_of_Existence"
+                             Width="180"
+                             Height="40"
+                             Background="Black"
+                             HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center"
+                             Foreground="White"
+                             Content="Description"
+                             FontSize="15"
+                             Click="Btn_ComingSoon_Corner_of_Existence_OnClick"
+                         ></Button>
+                     </StackPanel>
+                 </StackPanel>
+             </StackPanel>
+
+              <StackPanel>
+				     <Label>SoftWare : </Label>
+                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                      <StackPanel Margin="20">
+                          <Label Content="Name : DNCaripa 2 "></Label>
+                          <Button
+                              Name="Btn_ComingSoon_DNCaripa2"
+                              Width="180"
+                              Height="40"
+                              Background="Black"
+                              Foreground="White"
+                              HorizontalContentAlignment="Center"
+                              VerticalContentAlignment="Center"
+                              Content="Description"
+                              FontSize="15"
+                              Click="Btn_ComingSoon_DNCaripa2_OnClick"
+                          
+                          ></Button>
+                      </StackPanel>
+
+                      <StackPanel Margin="20">
+                          <Label Content="Name : VibeDriveAP"></Label>
+                          <Button
+                              Name="Btn_ComingSoon_VibeDriveAP"
+                              Width="180"
+                              Height="40"
+                              Background="DarkSalmon"
+                              Foreground="Black"
+                              HorizontalContentAlignment="Center"
+                              VerticalContentAlignment="Center"
+                              Content="Description"
+                              FontSize="15"
+                              Click="Btn_ComingSoon_VibeDriveAP_OnClick"
+                          
+                          ></Button>
+                      </StackPanel>
+
+                      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                          <StackPanel Margin="20"></StackPanel>
+                          <StackPanel Margin="20"></StackPanel>
+                      </StackPanel>
+
+                  </StackPanel>
+              </StackPanel>
+		  </StackPanel>
       </Border>
 
      
