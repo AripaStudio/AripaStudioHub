@@ -71,6 +71,8 @@
                   Width="200"
                   Height="200"
               ></Image>
+
+              <Label>V1.0.0</Label>
           </StackPanel>
       </Border>
 
