@@ -16,4 +16,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AripaStudioHub\AripaStudioHub.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="assets\" />
+  </ItemGroup>
 </Project>
