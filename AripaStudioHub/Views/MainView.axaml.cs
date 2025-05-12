@@ -202,7 +202,7 @@ public partial class MainView : UserControl
         }
     }
 
-    private void Btn_MainPageTelegramLink_OnClick(object? sender, RoutedEventArgs e)
+    private async void Btn_MainPageTelegramLink_OnClick(object? sender, RoutedEventArgs e)
     {
         string url = "https://t.me/AripaStudio";
         try
@@ -215,12 +215,11 @@ public partial class MainView : UserControl
         }
         catch (Exception exception)
         {
-           MessageBoxAP.MessageBoxShowOK("Error:" , Convert.ToString(exception));
-            throw;
+           await MessageBoxAP.MessageBoxShowOK("Error:" , Convert.ToString(exception), 320, 160);
         }
     }
 
-    private void BtnSocialMedia_Telegram_OnClick(object? sender, RoutedEventArgs e)
+    private async void BtnSocialMedia_Telegram_OnClick(object? sender, RoutedEventArgs e)
     {
         string url = "https://t.me/AripaStudio";
         try
@@ -233,12 +232,11 @@ public partial class MainView : UserControl
         }
         catch (Exception exception)
         {
-            MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception));
-            throw;
+           await MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception), 320, 160);
         }
     }
 
-    private void BtnSocialMedia_Github_OnClick(object? sender, RoutedEventArgs e)
+    private async void BtnSocialMedia_Github_OnClick(object? sender, RoutedEventArgs e)
     {
         string url = "https://github.com/AripaStudio";
         try
@@ -251,12 +249,11 @@ public partial class MainView : UserControl
         }
         catch (Exception exception)
         {
-            MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception));
-            throw;
+            await MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception), 320, 160);
         }
     }
 
-    private void BtnSocialMedia_Youtube_OnClick(object? sender, RoutedEventArgs e)
+    private async void BtnSocialMedia_Youtube_OnClick(object? sender, RoutedEventArgs e)
     {
         string url = "https://www.youtube.com/@AripaStudio";
         try
@@ -269,8 +266,7 @@ public partial class MainView : UserControl
         }
         catch (Exception exception)
         {
-            MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception));
-            throw;
+            await MessageBoxAP.MessageBoxShowOK("Error:", Convert.ToString(exception), 320, 160);
         }
 
     }
@@ -292,7 +288,7 @@ public partial class MainView : UserControl
         {
 
             linkImage = null;
-            MessageBoxAP.MessageBoxShowOK("Error", $"Error loading image: {ex.Message}");
+            await MessageBoxAP.MessageBoxShowOK("Error", $"Error loading image: {ex.Message}", 320, 160);
         }
 
 
@@ -342,7 +338,7 @@ public partial class MainView : UserControl
             {
                 
                 linkImage = null; 
-                MessageBoxAP.MessageBoxShowOK("Error", $"Error loading image: {ex.Message}");
+                await MessageBoxAP.MessageBoxShowOK("Error", $"Error loading image: {ex.Message}", 320, 160);
             }
 
             
@@ -532,7 +528,7 @@ public partial class MainView : UserControl
     //________________________________________________________________________________________________________________________________________
 
 
-    private void Btn_ComingSoon_Corner_of_Existence_OnClick(object? sender, RoutedEventArgs e)
+    private async void Btn_ComingSoon_Corner_of_Existence_OnClick(object? sender, RoutedEventArgs e)
     {
         string message;
         if (GLV.GLV_Language == "Persian")
@@ -554,10 +550,10 @@ public partial class MainView : UserControl
                       """;
         }
 
-        MessageBoxAP.MessageBoxShowOK("Corner of Existence", message);
+        await MessageBoxAP.MessageBoxShowOK("Corner of Existence", message, 320, 160);
     }
 
-    private void Btn_ComingSoon_DNCaripa2_OnClick(object? sender, RoutedEventArgs e)
+    private async void Btn_ComingSoon_DNCaripa2_OnClick(object? sender, RoutedEventArgs e)
     {
         string message;
         if (GLV.GLV_Language == "Persian")
@@ -579,10 +575,10 @@ public partial class MainView : UserControl
                       """;
         }
 
-        MessageBoxAP.MessageBoxShowOK("DNCaripa2 ", message);
+        await MessageBoxAP.MessageBoxShowOK("DNCaripa2 ", message, 320, 160);
     }
 
-    private void Btn_ComingSoon_VibeDriveAP_OnClick(object? sender, RoutedEventArgs e)
+    private async void Btn_ComingSoon_VibeDriveAP_OnClick(object? sender, RoutedEventArgs e)
     {
         string message;
         if (GLV.GLV_Language == "Persian")
@@ -604,7 +600,15 @@ public partial class MainView : UserControl
                       """;
         }
 
-        MessageBoxAP.MessageBoxShowOK("VibeDrive ", message);
+        await MessageBoxAP.MessageBoxShowOK("VibeDrive ", message , 320 , 160);
+    }
+
+
+    private async void BTN_aboutBoxGPLv3_OnClick(object? sender, RoutedEventArgs e)
+    {
+        string message =
+            "Aripa Studio Hub\nCopyright (C) 2025 Khashayar Mobasheri (AripaStudio)\n\nThis program comes with ABSOLUTELY NO WARRANTY.\n\nThis is free software, and you are welcome to redistribute it under the terms of the GNU General Public License version 3.\n\nA copy of the GPLv3 license is distributed with this software.";
+        await MessageBoxAP.MessageBoxShowOK("GPLv3" ,message , 400 , 400);
     }
 }
 

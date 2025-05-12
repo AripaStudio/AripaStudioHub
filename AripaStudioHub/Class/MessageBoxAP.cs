@@ -18,13 +18,13 @@ namespace AripaStudioHub.Class
     public static class MessageBoxAP
     {
         
-        public static async Task MessageBoxShowOK(string title, string message)
+        public static async Task MessageBoxShowOK(string title, string message , int width , int height)
         {
             var dialog = new Window
             {
                 Title = title,
-                Width = 300,
-                Height = 150,
+                Width = width,
+                Height = height,
                 CanResize = false
             };
             dialog.Content = new StackPanel

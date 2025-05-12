@@ -72,7 +72,10 @@
                   Height="200"
               ></Image>
 
-              <Label>V1.0.0</Label>
+              <StackPanel Orientation="Horizontal">
+                  <Button Name="BTN_aboutBoxGPLv3" Width="80" Height="30" Content="aboutBox" Click="BTN_aboutBoxGPLv3_OnClick" ></Button>
+                  <Label>v1.1.0</Label>
+			  </StackPanel>
           </StackPanel>
       </Border>
 
